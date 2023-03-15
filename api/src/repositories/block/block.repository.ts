@@ -1,11 +1,16 @@
 import { Service } from 'typedi';
 
 import { Db } from '../../db/db.class';
+import {Place} from '../../types/models';
 
 @Service()
 export class BlockRepository {
 
   constructor(private db: Db) {}
+
+  public async find(blockId: number): Promise<Place> {
+    return this.db.place.where({'type':'block','id':blockId}).first();
+  }
 
   public async getMapLocationAndPlacesByBlockId(blockId: number): Promise<any> {
     const locations = await this.db.knex
