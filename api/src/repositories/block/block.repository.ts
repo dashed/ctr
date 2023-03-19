@@ -1,7 +1,6 @@
 import { Service } from 'typedi';
 
 import { Db } from '../../db/db.class';
-import {knex} from '../../db';
 
 @Service()
 export class BlockRepository {
@@ -9,7 +8,7 @@ export class BlockRepository {
   constructor(private db: Db) {}
 
   public async getMapLocationAndPlacesByBlockId(blockId: number): Promise<any> {
-    const locations = await knex
+    const locations = await this.db.knex
       .select(
         'map_location.location',
         'map_location.available',

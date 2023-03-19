@@ -34,8 +34,6 @@ export class MemberService {
     private memberRepository: MemberRepository,
     private transactionRepository: TransactionRepository,
     private walletRepository: WalletRepository,
-    private placeRepository: PlaceRepository,
-    private mapLocationRespository: MapLocationRepository,
   ) {}
 
   /**

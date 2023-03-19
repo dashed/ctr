@@ -4,7 +4,6 @@ import { Request, Response } from 'express';
 import { Container } from 'typedi';
 import validator from 'validator';
 
-import {db, knex} from '../db';
 import {
   sendPasswordResetEmail,
   sendPasswordResetUnknownEmail,
@@ -13,7 +12,6 @@ import {
   MemberService,
   HomeService,
 } from '../services';
-import { SessionInfo } from 'session-info.interface';
 
 class MemberController {
   /** List of disallowed usernames. */
