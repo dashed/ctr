@@ -12,3 +12,4 @@ export * from './role.model';
 export * from './role-assignment.model';
 export * from './transaction.model';
 export * from './wallet.model';
+export * from './messageboard.model';

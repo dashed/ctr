@@ -13,3 +13,4 @@ export * from './role/role.repository';
 export * from './role-assignment/role-assignment.repository';
 export * from './transaction/transaction.repository';
 export * from './wallet/wallet.repository';
+export * from './messageboard/messageboard.repository';
