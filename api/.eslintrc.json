@@ -1,68 +1,46 @@
 {
-  "env": {
-    "es2021": true,
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "ignorePatterns": ["jest.config.js"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": [
-    "@typescript-eslint"
-  ],
-  "rules": {
-    "comma-dangle": [
-      "error",
-      "always-multiline"
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
     ],
-    "eol-last": [
-      "error",
-      "always"
-    ],
-    "eqeqeq": [
-      "error",
-      "always"
-    ],
-    "indent": [
-      "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "max-len": [
-      "error",
-      {
-        "code": 100
-      }
-    ],
-    "no-tabs": [
-      "error",
-      {
-        "allowIndentationTabs": false
-      }
-    ],
-    "no-multiple-empty-lines": "error",
-    "no-unreachable": "off",
-    "no-var": "error",
-    "prefer-const": "error",
-    "prefer-template": "error",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
-    "@typescript-eslint/no-empty-function": "off"
-  }
+    "ignorePatterns": ["jest.config.js"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        "comma-dangle": ["error", "always-multiline"],
+        "eol-last": ["error", "always"],
+        "eqeqeq": ["error", "always"],
+        "indent": ["error", 2],
+        "linebreak-style": ["error", "unix"],
+        "max-len": [
+            "error",
+            {
+                "code": 100
+            }
+        ],
+        "no-tabs": [
+            "error",
+            {
+                "allowIndentationTabs": false
+            }
+        ],
+        "no-multiple-empty-lines": "error",
+        "no-unreachable": "off",
+        "no-var": "error",
+        "prefer-const": "error",
+        "prefer-template": "error",
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "@typescript-eslint/no-empty-function": "off"
+    }
 }

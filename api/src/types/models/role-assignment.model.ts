@@ -6,4 +6,6 @@ export interface RoleAssignment extends Model {
   member_id: number;
   /** ID of role being assigned */
   role_id: number;
+  /** ID of place id role is assigned to */
+  place_id: number;
 }

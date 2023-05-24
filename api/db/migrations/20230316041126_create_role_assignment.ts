@@ -10,22 +10,18 @@ function applyCommon(table: Knex.CreateTableBuilder) {
 const tableName = 'role_assignment';
 
 export async function up(knex: Knex): Promise<void> {
-  if (!await knex.schema.hasTable(tableName)) {
+  if (!(await knex.schema.hasTable(tableName))) {
     await knex.schema.createTable(tableName, table => {
       console.log(`Creating ${tableName} table`);
       applyCommon(table);
-      
-      table.integer('member_id')
-        .unsigned()
-        .notNullable();
-      table.foreign('member_id')
-        .references('member.id');
 
-      table.integer('role_id')
-        .unsigned()
-        .notNullable();
-      table.foreign('role_id')
-        .references('role.id');
+      table.integer('member_id').unsigned().notNullable();
+      table.foreign('member_id').references('member.id');
+
+      table.integer('role_id').unsigned().notNullable();
+      table.foreign('role_id').references('role.id');
+
+      table.integer('place_id').unsigned();
     });
   }
 }
